@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server package json",
+  "main": "server.js",
+  "repository": "https://github.com/salvadordiaz1222/drink-creator",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seeds/seed.js",
+    "watch": "nodemon server.js"
+  },
+  "dependencies": {
+    "apollo-server": "^3.4.1",
+    "graphql": "^16.0.1",
+    "nodemon": "^2.0.14"
+  }
+}
