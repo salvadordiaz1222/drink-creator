@@ -1,13 +1,20 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { ApolloProvider, ApolloClient, inMemoryCache } from "react-apollo";
 import "./App.css";
+
+const client = new ApolloClient({
+  uri: "http://localhost:4000",
+  cache: new inMemoryCache(),
+});
 
 function App() {
   return (
-    <div>
+    <ApolloProvider client={client}>
       <Header />
+
       <Footer />
-    </div>
+    </ApolloProvider>
   );
 }
 
